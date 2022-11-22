@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> TASK details</title>
+</head>
+<style>
+body{
+background-color:pink;
+}
+    h2{
+    color:red;
+    }
+    form{
+    color:white;
+    }
+</style>
+<body>
+<h2>ADD TODAY'S TASK</h2>
+{% for i in task_results %}
+   <h3>{{i.Take_name}}<br>
+    {{i.priority}}<br>
+    {{i.date}}<br>
+<a href="{% url 'todayappurl:update' id %}">update</a>
+<a href="delete.html">delete</a><br><br><br></h3>
+{% endfor %}
+
+</body>
+</html>

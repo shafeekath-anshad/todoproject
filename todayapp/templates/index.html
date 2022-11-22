@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODAY'S TASK</title>
+</head>
+<style>
+body{
+background-color:pink;
+}
+    h2{
+    color:red;
+    }
+    form{
+    color:white;
+    }
+</style>
+<body><center>
+<h2>ADD TODAY'S TASK</h2>
+<h1><form method="post" action="" >
+    {% csrf_token %}
+    <input type="text" placeholder="enter task name" name="taskname" id="taskname"><br>
+    <input type="number" placeholder="enter priority" name="priority" id="priority"><br>
+    <input type="date" placeholder="enter date" name="date" id="date"><br>
+    <input type="submit">
+</form></h1>
+</center>
+</body>
+</html>
